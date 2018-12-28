@@ -85,6 +85,49 @@ let ojb0 = {
 
 log(`${'test' in ojb0}, ${ojb0['test']}`);
 
+//The 'for...in' loop
+log('')
+log('The "for...in" user')
+let forInUser = {
+    name: 'John',
+    age: 30,
+    isAdmin: true,
+}
+
+for(let prop in forInUser){
+    
+    log(`${prop} is ${forInUser[prop]}`)
+}
+
+let codes = {
+    "49":'Germany',
+    "41":'Switzerland',
+    "44":'Great Britain',
+    "1" : "USA",
+}
+
+for(let code in codes){
+    log(code);
+}
+
+log('Math trunc')
+log( String(Math.trunc(Number('49'))));
+log( String(Math.trunc(Number('+49'))));
+log( String(Math.trunc(Number('1.2'))));
+
+
+log('Order trick');
+
+let codes1 = {
+    "+49":'Germany',
+    "+41":'Switzerland',
+    "+44":'Great Britain',
+    "+1" :'USA',
+}
+
+for(let code in codes){
+    log(+code);
+}
 
 
 
