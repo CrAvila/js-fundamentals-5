@@ -63,6 +63,33 @@ log(user1);
 log(user2);
 
 
+//Existence Check
+
+log(user.noSuchProperty == undefined);
+
+log(`${'name' in user1}, ${user1['name']}` );
+log(`${'age' in user2}, ${user2['age']}` );
+log(`${'bla' in user2}, ${user2['bla']}` );
+
+
+let user3 = makeUser('Brooke',17);
+log(user3);
+
+let key0 = 'age';
+
+log(`${key0 in user3}, ${user3[key0]}`);
+
+let ojb0 = {
+    test:undefined,
+}
+
+log(`${'test' in ojb0}, ${ojb0['test']}`);
+
+
+
+
+
+
 
 
 
