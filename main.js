@@ -163,6 +163,83 @@ constUser.age = 25;
 
 log(constUser);
 
+//Cloning and Mergin
+log('');
+log('Cloning and Merging');
+
+
+    //Method 1
+let originalUser = {
+    name: 'Carlos',
+    age: 17,
+}
+
+let clonedUser = {};
+
+for(let key in originalUser){
+    clonedUser[key] = originalUser[key];
+}
+
+log(originalUser);
+clonedUser.name = 'Pete'
+log(clonedUser);
+
+
+    //Method 2
+    log('Method 2')
+
+    let clone2 = Object.assign(clonedUser, originalUser);
+    log(clone2);
+
+    //Merging
+    log('Merging');
+    let adminUser = {
+        name:'Azazel',
+    };
+
+    let permissions1 = {canView:true, isGay:false};
+    let permissions2 = {canEdit:true};
+
+    log(adminUser);
+
+    Object.assign(adminUser, permissions1, permissions2);
+
+    log(adminUser);
+
+    //Complex ones
+    log('');
+    log('Properties as references');
+
+    let complexUser = {
+        name:'Charles',
+
+        sizes: {
+            height:182,
+            width:50,
+        },
+
+
+    };
+
+    log(complexUser);
+    log(complexUser['sizes']['height']);
+
+    let clone = Object.assign({}, complexUser);
+    log(clone);
+
+    log(complexUser['sizes'] == clone['sizes'])
+
+    complexUser['sizes']['width']++;
+    log(complexUser['sizes']['width']);
+    log(clone['sizes']['width']);
+
+
+
+
+
+
+
+
 
 
 
