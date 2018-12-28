@@ -129,6 +129,39 @@ for(let code in codes){
     log(+code);
 }
 
+//Copying by reference
+log('');
+log('Copying by reference');
+
+let user4 = {name: 'John'};
+
+let admin = user4;
+
+log(admin)
+
+admin.name = 'Pete';
+
+log(admin);
+log(user4);
+
+log(user4 == admin);
+log(user4 === admin);
+
+let a = {};
+let b = {};
+
+log(a == b);
+log(a === b);
+
+const constUser = {
+    name: 'James',
+};
+
+log(constUser);
+
+constUser.age = 25;
+
+log(constUser);
 
 
 
