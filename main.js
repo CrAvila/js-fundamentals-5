@@ -41,6 +41,26 @@ let bag = {
 
 log(`The bag has ${bag['oranges']} ${fruit}.`);
 
+const makeUser = (name,age) => {
+    return {
+        name: name,
+        age: age,
+    }
+}
+
+const user1 = makeUser('Carlos',17);
+
+const shorthandValue = (name,age) => {
+    return {
+        name,
+        age,
+    }
+}
+
+const user2 = shorthandValue('Claudia',15);
+
+log(user1);
+log(user2);
 
 
 
