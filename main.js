@@ -19,4 +19,30 @@ delete user['likes birds'];
 
 log(user);
 
+let key = 'single';
+
+user[key] = true;
+
+log(user);
+
+user['age'] = 30;
+
+let data = 'age';
+
+log(user[data]);
+
+//Computed properties
+
+let fruit = 'oranges';
+
+let bag = {
+    [fruit]: 5,
+};
+
+log(`The bag has ${bag['oranges']} ${fruit}.`);
+
+
+
+
+
 
